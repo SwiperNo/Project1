@@ -1,6 +1,8 @@
 # defining hotel cost per night
+
 def hotel_cost(nights):
   return 140 * nights
+  
 # calculate the plane ride cost 
 def plane_ride_cost(city):
   if city == "Charlotte":
@@ -11,6 +13,7 @@ def plane_ride_cost(city):
     return 222
   elif city == "Los Angeles":
     return 475
+    
 #defining the rental cost
 def rental_car_cost(days):
   cost = days * 40
@@ -19,8 +22,10 @@ def rental_car_cost(days):
   elif days >= 3:
     cost -= 20
   return cost
+  
 #Taking the sum of all of the defined functions 
 def trip_cost(city, days,spending_money):
   return rental_car_cost(days) + hotel_cost(days - 1) + plane_ride_cost(city) + spending_money
+  
 #test run on the code to calculate trip cost
 print trip_cost("Los Angeles", 5, 600)
